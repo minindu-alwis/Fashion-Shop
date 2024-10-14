@@ -348,7 +348,7 @@ class shop{
 			if(inputphonenumber.equals(phonenumber[i])){
 				found=true;
 				
-				String sizemind = "";
+			
                 int index =0;
                 
                 for (int m = 0; m < phonenumber.length; m++) {
@@ -1246,7 +1246,6 @@ class shop{
 		
 		//phone number lenth=uniqe ewa thiyen nisa
         String[] uniqueCustomers=new String[phonenumber.length];
-        int[] totalQty=new int[phonenumber.length];
         double[] totalAmount=new double[phonenumber.length];
         int[][] sizeQty=new int[phonenumber.length][6];
 
@@ -1272,13 +1271,11 @@ class shop{
                 // New customer
                 uniqueCustomers[uniqueCount]=customer;
                 sizeQty[uniqueCount][sizeIndex]=quantity;//qty & size
-                totalQty[uniqueCount]=quantity;
                 totalAmount[uniqueCount]=itemAmount;
                 uniqueCount++;
             } else {
                 // Already customer
                 sizeQty[customerIndex][sizeIndex]+=quantity;
-                totalQty[customerIndex]+=quantity;
                 totalAmount[customerIndex]+=itemAmount;
             }
         }
